@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, SkipForward, Volume2, VolumeX, Music, X, ChevronUp, Volume1 } from 'lucide-react';
 import { useState, useRef, useEffect, createContext, useContext } from 'react';
 import { Slider } from '@/components/ui/slider';
-import songFile from "@/assets/3-Sirivennala.mp3";
+import songFile from "@/assets/Trend Maarina Friend Maaradu - SenSongsMp3.Co.mp3";
 
 
 // Birthday playlist with royalty-free audio URLs

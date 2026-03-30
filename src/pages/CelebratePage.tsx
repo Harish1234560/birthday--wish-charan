@@ -85,9 +85,11 @@ export default function CelebratePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-             Another year older, another year more inspiring! 🌟🎂!
-             Thank you for all the guidance, encouragement, and wonderful memories 🙏📚✨
-             Your support and wisdom mean more than words can say 💐💖. Let’s make this year even more unforgettable 😎🥳  !Click the button and unlock the birthday surprise!
+            Another year older, another year more awesome! 🎂✨  
+Thanks for all the crazy memories, late-night talks, and endless laughs 😄  
+
+Let’s make this year even more unforgettable 😎🥳  
+Click the button below to unlock your birthday surprise! 🎁
           </motion.p>
 
           {!celebrationComplete && !isCelebrating && (

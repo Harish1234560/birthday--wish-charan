@@ -9,7 +9,7 @@ import CinematicIntro from '@/components/CinematicIntro';
 import { PartyPopper } from 'lucide-react';
 
 // Customize this name for the birthday person!
-const BIRTHDAY_NAME = "Devei Hemalatha";
+const BIRTHDAY_NAME = "Charan(Tall boy)";
 
 export default function Index() {
   const navigate = useNavigate();
@@ -75,7 +75,7 @@ export default function Index() {
             animate={{ opacity: showIntro ? 0 : 1 }}
             transition={{ delay: 0.8 }}
           >
-            A Special Celebration for {BIRTHDAY_NAME} madam
+            A Special Celebration for {BIRTHDAY_NAME}
           </motion.p>
         </motion.div>
 
@@ -116,8 +116,8 @@ export default function Index() {
           transition={{ delay: 2.5 }}
         >
           <p className="text-sm text-muted-foreground">
-            Made with 💖 by a student, for a wonderful teacher
-          </p>
+          Crafted with 💙 by Harish, for my friend Charan.        
+            </p>
         </motion.footer>
       </main>
     </div>

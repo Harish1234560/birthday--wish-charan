@@ -6,16 +6,16 @@ import SparkleTrail from '@/components/SparkleTrail';
 import FloatingButton from '@/components/FloatingButton';
 import { MessageSquareHeart, Heart, ChevronRight } from 'lucide-react';
 
-const BIRTHDAY_NAME = "Devei Hemalatha";
+const BIRTHDAY_NAME = "Charan(Tall boy)";
 
 const messages = [
-  "🎂 Happy Birthday, dear Madam! Your guidance 🙏 and patience 🌸 have shaped our lives in ways words can’t express. Wishing you a year filled with health 💖, happiness 😊, and peace ✨.",
+  "🎂 Happy Birthday, my friend! 😎 Thanks for all the fun, laughs, and unforgettable memories. Let’s make this year even more awesome! 🔥",
 
-  "📚 On your special day 🌟, thank you for inspiring us 💫 to dream big 🚀, work hard ✍️, and believe in ourselves 💪. You are not just a teacher 🎓, but a true guide 🌼 and role model 🌈.",
+  "😄 Another year older, but still the same crazy friend! 😂 Thanks for always being there. Wishing you happiness, success, and lots of fun 🎉",
 
-  "🍎 A teacher like you 💝 is truly a blessing 🙏. Your lessons 📖 go beyond books and stay in our hearts ❤️ forever. May your birthday 🎉 be as wonderful ✨ and meaningful 🌺 as the knowledge you share 📘.",
+  "💥 Happy Birthday, bro! Life is better with you in it 🤝 From late-night talks to random fun moments — everything is special 💖",
 
-  "💐 Happy Birthday to my most favorite teacher 💛! Your wisdom 🧠, care 🤍, and encouragement 🌟 make learning beautiful 📚. Wishing you endless smiles 😊, good health 🌿, and success 🌟 always 🙏."
+  "🥳 Cheers to more memories, more adventures, and more fun together! 😎 Stay awesome always 🔥 Happy Birthday!"
 ];
 
 

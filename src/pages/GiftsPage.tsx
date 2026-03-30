@@ -10,20 +10,20 @@ import confetti from 'canvas-confetti';
 const gifts = [
   { 
     id: 1, 
-    emoji: '📚😂', 
-    message: 'Unlimited chalk, zero homework, and students who actually listen (miracles happen!) 😄', 
+    emoji: '📱😂', 
+    message: 'Even though we’re in different colleges, our chats, calls, and memories never stop 😎🔥', 
     color: 'from-primary to-accent' 
   },
   { 
     id: 2, 
-    emoji: '☕😌', 
-    message: 'Extra tea breaks, peaceful classrooms, and absolutely no “Ma’am one doubt” after the bell 🔔🤣', 
+    emoji: '🍕😋', 
+    message: 'Missing those hangouts and food moments 🍕 but we’ll make up for it soon 😂', 
     color: 'from-secondary to-primary' 
   },
   { 
     id: 3, 
-    emoji: '🏆😎', 
-    message: 'A legendary year of being the coolest teacher while we pretend to be attentive 😇😂', 
+    emoji: '🚀🤝', 
+    message: 'Different paths, same friendship 💯 Wishing you success, fun, and unforgettable moments this year 🔥', 
     color: 'from-accent to-secondary' 
   },
 ];

@@ -7,7 +7,7 @@ import FloatingButton from '@/components/FloatingButton';
 import Guestbook from '@/components/Guestbook';
 import { BookHeart, PenLine, Sparkles, ChevronRight } from 'lucide-react';
 
-const BIRTHDAY_NAME = "Devei Hemalatha";
+const BIRTHDAY_NAME = "Charan(Tall boy)";
 
 export default function GuestbookPage() {
   const navigate = useNavigate();

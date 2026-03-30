@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, MessageCircleHeart, Loader2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+import { getSupabaseEnvError, supabase } from '@/integrations/supabase/client';
 import confetti from 'canvas-confetti';
 
 interface GuestbookProps {
@@ -30,6 +31,12 @@ export default function Guestbook({ isOpen, onClose, birthdayName }: GuestbookPr
 
   useEffect(() => {
     if (isOpen) {
+      const envError = getSupabaseEnvError();
+      if (!supabase) {
+        toast.error(envError ?? 'Supabase client is not initialized.');
+        return;
+      }
+
       fetchEntries();
       
       // Subscribe to realtime updates
@@ -55,6 +62,10 @@ export default function Guestbook({ isOpen, onClose, birthdayName }: GuestbookPr
   }, [isOpen]);
 
   const fetchEntries = async () => {
+    if (!supabase) {
+      toast.error(getSupabaseEnvError() ?? 'Supabase client is not initialized.');
+      return;
+    }
     setIsLoading(true);
     const { data, error } = await supabase
       .from('guestbook')
@@ -70,6 +81,11 @@ export default function Guestbook({ isOpen, onClose, birthdayName }: GuestbookPr
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !message.trim()) return;
+
+    if (!supabase) {
+      toast.error(getSupabaseEnvError() ?? 'Supabase client is not initialized.');
+      return;
+    }
 
     setIsSubmitting(true);
     const { error } = await supabase

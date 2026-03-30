@@ -8,7 +8,7 @@ import { Sparkles, Gift, Heart, Star, PartyPopper, RotateCcw } from 'lucide-reac
 import confetti from 'canvas-confetti';
 import { useHapticFeedback } from '@/hooks/useHapticFeedback';
 
-const BIRTHDAY_NAME = "Devei Hemalatha";
+const BIRTHDAY_NAME = "Charan(Tall boy)";
 
 export default function SurprisePage() {
   const navigate = useNavigate();
@@ -206,8 +206,7 @@ export default function SurprisePage() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
                       >
-                       “May this year bring you endless joy 🌈, beautiful moments 🌼, and all the happiness 💖 your heart can hold. You are truly loved 🤍, deeply respected 🙏, and sincerely celebrated 🎉 today and always ✨.”
-                      </motion.p>
+Hope this year brings you lots of happiness 🌈, amazing moments 🌼, and everything your heart wants 💖 You’re truly loved 🤍 and today is all about you 🎉😎                      </motion.p>
                       <motion.div
                         className="mt-6 flex justify-center gap-2"
                         initial={{ opacity: 0 }}

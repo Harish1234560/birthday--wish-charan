@@ -1,12 +1,13 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Upload, Camera } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { getSupabaseEnvError, supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import memory1 from '@/assets/memory-1.jpeg';
-import memory2 from '@/assets/memory-2.jpeg';
-import memory3 from '@/assets/memory-3.jpeg';
-import memory4 from '@/assets/memory-4.jpeg';
+import memory1 from '@/assets/WhatsApp Image 2026-03-30 at 12.12.52 PM (1).jpeg';
+import memory2 from '@/assets/WhatsApp Image 2026-03-30 at 12.12.52 PM.jpeg';
+import memory3 from '@/assets/WhatsApp Image 2026-03-30 at 12.12.53 PM.jpeg';
+import memory4 from '@/assets/WhatsApp Image 2026-03-30 at 12.12.54 PM.jpeg';
+import memory5 from '@/assets/WhatsApp Image 2026-03-30 at 12.12.54 PM (1).jpeg';
 
 interface MemoryGalleryProps {
   isOpen: boolean;
@@ -25,25 +26,31 @@ const defaultMemories = [
   {
     id: 'default-1',
     src: memory1,
-    caption: "That magical all together 🌅 your daughter",
+    caption: "Proof that I exist… even if we never clicked a photo together 😂📸",
     uploaderName: null,
   },
   {
     id: 'default-2',
     src: memory2,
-    caption: "The birthday party that started it all! 🎂",
+    caption: "No photos with you… but unlimited memories in my brain 🧠😂",
     uploaderName: null,
   },
   {
     id: 'default-3',
     src: memory3,
-    caption: "Our unforgettable time together with your daughter🏔️",
+    caption: "Different colleges, same nonsense 😎… just missing the selfie 🤳😂",
     uploaderName: null,
   },
   {
     id: 'default-4',
     src: memory4,
-    caption: "Our unforgettable moment together with your daughter 🏔️",
+    caption: "We forgot to take photos… because we were busy being legends 😌🔥",
+    uploaderName: null,
+  },
+  {
+    id: 'default-5',
+    src: memory5,
+    caption: "No pics together… but still best friends, that’s the real flex 💯😂",
     uploaderName: null,
   },
 ];
@@ -70,6 +77,12 @@ export default function MemoryGallery({ isOpen, onClose }: MemoryGalleryProps) {
 
   useEffect(() => {
     if (isOpen) {
+      const envError = getSupabaseEnvError();
+      if (!supabase) {
+        toast.error(envError ?? 'Supabase client is not initialized.');
+        return;
+      }
+
       fetchPhotos();
       
       // Subscribe to realtime updates
@@ -92,6 +105,10 @@ export default function MemoryGallery({ isOpen, onClose }: MemoryGalleryProps) {
   }, [isOpen]);
 
   const fetchPhotos = async () => {
+    if (!supabase) {
+      toast.error(getSupabaseEnvError() ?? 'Supabase client is not initialized.');
+      return;
+    }
     const { data, error } = await supabase
       .from('memory_photos')
       .select('*')
@@ -111,6 +128,11 @@ export default function MemoryGallery({ isOpen, onClose }: MemoryGalleryProps) {
 
     if (!uploaderName.trim()) {
       toast.error('Please enter your name first!');
+      return;
+    }
+
+    if (!supabase) {
+      toast.error(getSupabaseEnvError() ?? 'Supabase client is not initialized.');
       return;
     }
 
@@ -209,7 +231,7 @@ export default function MemoryGallery({ isOpen, onClose }: MemoryGalleryProps) {
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-3xl font-display text-gradient">
-                📸 Our Memories
+                📸 Memories of Charan
               </h2>
               <div className="flex items-center gap-2">
                 <motion.button
